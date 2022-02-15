@@ -1,0 +1,115 @@
+// function greeting(name){
+//     console.log(`Hello, my name is ${name}`)
+// }
+//
+// module.exports = {greeting} експорт функції
+
+// function greeting(name){
+//     console.log(`Hello, my name is ${name}`)
+// }
+//
+// module.exports = {greeting} експорт функції
+
+// const { greeting} = require("./helper") виклик функції
+//
+// greeting('Maxym')
+
+// console.log(__filename) - повертає шлях до файлу
+// console.log(__dirname) - повертає шлях до папки в якій знаходиться файл
+// console.log(process.cwd()) - повертає шлях до файлу, з якого запускали ноду
+
+// global.name = 'Max' - створення глобальної зміни
+// console.log(name)
+
+// import path from "path";
+//
+// let joinedPath = path.join('text','text2','text3', 'filex', 'file.txt');- join приймає будь-яку кількість стрінгових значень
+
+// import path from "path";
+//
+// let s = path.normalize('test///files///public///text.txt'); - нормалізує стрінгу видаляючи зайві слеші
+
+// const os = require('os') - дає змогу дізнатись данні про залізо
+//
+// console.log(os.cpus().length)
+// console.log(os.cpus())
+
+// const fs =require('fs')
+//
+// fs.writeFileSync(path.join(__dirname, 'files', 'file.txt'), 'Some Data'); - створює папку з назвою,вмістом, розширенням
+
+// import fs from "fs";
+// import path from "path";
+//
+// fs.writeFile(path.join(__dirname, 'file.txt'), 'SomeData',(err)=>{
+//     if (err){
+//         console.log(err);
+//         throw err;
+//     }
+// }) - асинхронно додати файл
+
+// import fs from "fs";
+// import path from "path";
+
+// fs.readFile(path.join(__dirname, 'Notes','file.txt'), 'utf8',(err, data)=>{
+//     if (err){
+//         console.log(err);
+//         throw err;
+//     }
+//     console.log(data)
+// }) - прочитати файл, в опшенсах вказано кодування utf8, щоб відповідть приходила в текстовому форматі, що можна дату .toString
+
+// fs.appendFile(path.join(__dirname, 'Notes', 'file.txt'), '\nNew Data', {flag : 'w'},(err)=>{
+//     if (err){
+//         console.log(err);
+//         throw err
+//     }
+// }) - додати данні до файлу, flag вказує, що кожного разу значення буде перезаписуватись
+
+// fs.truncate(path.join(__dirname,'Notes','file.txt'),(err)=>{
+//     if (err){
+//         console.log(err);
+//         throw err
+//     }
+// }) видаляє дейту з файлу
+
+// fs.unlink(path.join(__dirname,'Notes','file.txt'),(err)=>{
+//     if (err){
+//         console.log(err);
+//         throw err
+//     }
+// }) видалє сам файл
+
+// fs.mkdir(path.join(__dirname,'Notes2','Notes3','Notes4'), {recursive: true},(err)=>{
+//     if (err){
+//         console.log(err);
+//         throw err
+//     }
+// }) створює папку, щоб створити з дочірніми папками - в опшен прописуємо recursive:true
+
+// fs.rmdir(path.join(__dirname,'Notes2','Notes3','Notes4'),(err)=>{
+//     if (err){
+//         console.log(err);
+//         throw err
+//     }
+// }) видаляє папку
+
+// fs.readdir(path.join(__dirname),(err,data)=>{
+//     if (err){
+//         console.log(err);
+//         throw err
+//     }else {
+//         console.log(data)
+//     }
+// }) дає змогу прочитати по щляху, що знаходиться в папці
+
+// fs.rename(path.join(__dirname, 'Notes', 'note.js'),path.join(__dirname, 'Notes', 'notes.js'),(err)=>{
+//     if (err){
+//         console.log(err)
+//         throw err
+//     }
+// }) перейменовує папку/файл, в першому шляху вказуємо поточний файл/папку,
+// в другому вказуємо той же шлях, але вже з назвою файлу/папки на яку їочему змінити. Або можна перемістити,
+// в такому випадку вказуємо в другому паф шлях куди хочемо перемістити
+
+
