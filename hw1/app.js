@@ -51,8 +51,33 @@ let inPerson = [
 // }
 
 
-
-
-
-
+// fs.readFile(path.join(__dirname, 'main', 'online', 'online.txt'), 'utf8', (err, data)=> {
+//     if (err) {
+//         console.log(err)
+//         throw err
+//     }
+//     let onlineData = data
+//     fs.readFile(path.join(__dirname, 'main', 'inPerson', 'inPerson.txt'), 'utf8', (err, data) => {
+//         if (err) {
+//             console.log(err);
+//             throw err
+//         }
+//
+//         let inPersonData = data;
+//         // console.log(onlineData)
+//         // console.log(inPersonData)
+//         fs.appendFile(path.join(__dirname, 'main', 'online', 'online.txt'), `${inPersonData}`, {flag:'w'} , (err) => {
+//             if (err) {
+//                 console.log(err)
+//                 throw err
+//             }
+//             fs.appendFile(path.join(__dirname, 'main', 'inPerson', 'inPerson.txt'), `${onlineData}`, {flag: 'w'} ,(err) => {
+//                 if (err) {
+//                     console.log(err)
+//                     throw err
+//                 }
+//             })
+//             })
+//     })
+// })
 
