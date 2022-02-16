@@ -19,7 +19,22 @@ let path = require('path');
 // })
 
 fs.readdir(path.join(__dirname, 'Folder'), (err,data)=>{
-    if (data.includes(".")){
+    for (let dataElement of data) {
+        if (dataElement.includes('.')) {
+
+            fs.truncate(path.join(__dirname, 'Folder', `${dataElement}`), (err)=>{
+                if (err){
+                    console.log(err);
+                    throw err;
+                }
+            })
+        }else
+            fs.rename(path.join(__dirname, 'Folder', `${dataElement}`),path.join(__dirname, 'Folder', `new ${dataElement}`), (err)=>{
+                if (err){
+                    console.log(err);
+                    throw err;
+                }
+            })
 
     }
 })
