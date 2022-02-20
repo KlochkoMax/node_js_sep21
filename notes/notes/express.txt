@@ -1,0 +1,20 @@
+const express =require ('express');
+
+const app = express();
+
+const users = [
+    { name : 'jora'},
+    { name: 'alex'},
+    { name : 'mahmud'}
+]
+
+
+app.get('/', (req, res)=>{
+    res.send('Hello From Server') - повертає клієнту фразу при переході на port/
+    res.json(users) - повертає массив як при запросі на jasonplaceholders
+})  - першим вказується шлях, req - дата, яка приходить від юзера, res - дата, яка йому повертається(res and req are streams)
+
+app.listen(5200, ()=>{
+    console.log('Serves has started 5200')
+})
+-- вказуємо порт, і потім колбек щоб зрозуміти на якому порту крутиться апка

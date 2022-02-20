@@ -1,0 +1,32 @@
+let {EventEmitter} = require('events') - events - модуль
+
+let ee = new EventEmitter();
+
+ee.on('Log' - назва метода, (name) =>{
+    console.log(`Log is working ${name}`) - тут прописуємо коллбек функцію
+})
+
+ee.emit('Log', 'Oleg') - викликати емітер який спрацює стільки разів скільки викличеш
+
+ee.once('') - спрацьовує лише раз
+
+ee.eventNames - повертає масив з назв івентів
+
+const readStream = fs.createReadStream (path.join(__dirname, 'test.txt'));
+
+readStream.on('data', (chunk)=>{
+  console.log(chunk)
+})  - через .on запускаємо івент ємітер, на 'data' відпрацьовує зчитування файлу, chunk - частина інформації яка прилітає на стрім
+
+const writeString = fs.creatWriteStream (path.join(__dirname, 'fileTest.txt'));
+
+writeStream.write( 'NEW DATA', (err)=> { - записати данні в файл, 'NEW DATA' - це данні, які ми передаємоб створюємо через .write
+}) - стріми використовуємо коли потрібно записати великий об'єм інформації
+
+    ПІСЛЯ ЗАПУСКУ МЕТОДУ WRITE обов'язково потрібно його завершити, через наступний метод
+
+writeStream.end()
+
+
+
+readsTream.pipe(writeStream) -читаємо данні з врайтстріма і кладемо їх в рідстрім

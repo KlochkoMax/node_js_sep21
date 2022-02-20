@@ -1,0 +1,13 @@
+npm i express-handlebars - встановлюємо
+
+const {engine} = require('express-handlebars') - підтягуємо
+
+const app = express()
+
+app.use(express.static(path.join(__dirname, 'static'))); show where is our folder 'static';
+
+app.set('view engine', '.hbs') - show that we will use hbs as engine for templates
+
+app.engine('.hbs', engine({defaultLayout: false}));
+
+app.set('views', path.join(__dirname, 'static') show that ours files with .hbs endings will be in some path

@@ -8,15 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    {{this.firstName}}
 
-    <ul>
-        <li>Firstname: {{userInfo.firstName}}</li>
-        <li>LastName: {{userInfo.lastName}}</li>
-        <li>Email: {{userInfo.email}}</li>
-        <li>Password: {{userInfo.password}}</li>
-        <li>Age: {{userInfo.age}}</li>
-        <li>City: {{userInfo.city}}</li>
-    </ul>
+<form action="/signIn" method="post">
+    <h3>Enter your password and email</h3><br>
+    Email<input type="text" name="email">
+    Password<input type="text" name="password">
+    <input type="submit" name="OK">
+</form>
+
 </body>
 </html>
